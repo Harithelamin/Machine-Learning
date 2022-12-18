@@ -2,7 +2,8 @@
 Project 3 on Machine Learning
 UIO
 
-# FYS-STK4155 - Project 3: Classifying age, and gender using Neural Network, and Convencual Neural Network
+# FYS-STK4155 - Project 3: Classifying age, and gender using Ridge, Lasso, Bagging, AdaBoost, and Convencual Neural Network
+
 # Dependencies
 The source code of this project requires Python 3, and the following libraries which defined in top of the Jupiter 
 
