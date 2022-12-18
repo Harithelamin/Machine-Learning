@@ -1,0 +1,92 @@
+\begin{introduction}
+This project is an experiment with, Ridge,lasso,Bagging, with DecisionTreeClassifier, and Adapost. Then i implemented a  
+convolutional neural networks , which defined as a class of deep neural networks used in deep learning and machine learning.
+
+Convolutional neural networks are usually used for visual imagery, helping the computer identify and learn from images. 
+I will use deep learning methods to build neural networks, train the model, execute the algorithm and get the result in order to reveal how the deep neural network works.
+
+Deep learning models are trained using large sets of labeled data and neural network architectures that learn features directly from the data. Networks will be trained on a specific data set.
+
+I will focus on one of the most popular types of deep neural networks called Consensual Neural Network known as ConvNets.
+
+\hfill \break
+\hfill \break
+
+A. Goals
+1) Find a good dataset to be used as  datasets for the models.
+2) Design the the models, and find fitting hyperparameters in research.
+3) Train the models, with the dataset.
+4) Evaluate the models and discuss the results.
+5) Optimize the models
+
+B. Significance
+It is important to achieve the research goal, which is to compare the performance of different algorithms, and methods.
+
+In this paper, I aim to how to train the model using a public data source to see which method will help predict age from facess with a good performance.
+
+
+C. Paper Structure
+The paper is structured as follows: (1) introduction, (2)
+background, (3) model, (4) results, (5) discussion, and (6) conclusion. The background chapter provides
+an overview of the most important concepts for this research
+project including other relevant literature. The model chapter
+details the topology, training- and evaluation method of the
+models. 
+
+
+\subsubsection{Related work}
+\section{Related Work}
+Through the initial literature review of work described in Abdolrashidi et al. (2020) [1],
+Greco et al. (2020) [2], Haseena et al. (2022) [3], Liao et al. (2018) [4], Dhomne et al. (2018),
+Nyeong-Ho et al. (2018) and Steven et al. (2019), we have decided on our topic and approach.
+
+In Abdolrashidi et al. (2020), the authors proposed a two-headed attentional CNN
+where one head is responsible for gender prediction while the other is for age prediction, and
+the result of gender prediction is used to facilitate age prediction. An ensemble of a residual
+attentional network (RAN) and residual convolutional network (ResNet) is also applied to
+further boost the overall accuracy.
+In Greco et al. (2020), the authors based their model on so-called MobileNets whose
+architecture is particularly suited to balance the trade-off between accuracy and speed, such
+that the final model can be applied on platforms with limited processing power such as
+mobile devices.
+In Haseena et al. (2022), the authors proposed pre-processing steps including image
+processing, noise removal, face detection and alignment and applied a deep convolutional
+neural network with 5 convolution layers and 2 fully connected layers for feature extraction.
+Finally, classification was made with support vector machines. In Liao et al. (2018), a similar
+approach is proposed for feature extraction. However, the authors proposed a
+divide-and-rule method to reduce the complexity of age prediction by simplifying the problem
+into comparing two faces and predicting which one is of an older age.
+In Nyeong-Ho et al. (2018), the authors proposed a novel ordinal regression
+algorithm, called moving window regression. The notion of relative rank (in this case both
+age and gender, separately) which is a new order representation scheme for input and
+reference instances was introduced. Then global and local relative regressors to predict
+ranks within entire and specific rank ranges are developed. After that, there is a need to
+refine an initial rank estimate iteratively by selecting two reference instances to form a search
+window and then estimating the rank within the window. Extensive experiments results show
+that the proposed algorithm achieves state-of-the-art performances on various benchmark
+datasets for facial age estimation and historical color image classification.
+In Steven et al. (2019), the authors introduced a continual learning approach to learn
+new tasks without forgetting. Unlike previous methods growing monotonically in size, their
+approach maintains the compactness in continual learning. The proposed packing and
+expanding method is effective and easy to implement, which can iteratively shrink and
+enlarge the model to integrate new functions. They claim that their integrated multitask model
+can achieve similar accuracy with only 39.9% of the original size.
+
+\subsubsection{Libraries}
+
+\hfill \break
+1.Keras: 
+
+Keras is an open-source software library that provides a Python interface for artificial neural networks. Keras acts as an interface for the TensorFlow library[7].
+\hfill \break
+\hfill \break
+2.TensorFlow : TensorFlow is a free and open-source software library for machine learning and artificial intelligence. It can be used across a range of tasks but has a particular focus on training and inference of deep neural networks[8].
+\hfill \break
+\hfill \break
+
+\subsubsection{Datasets}
+The data set used in this experiment is the UTK data set, which is a csv file that is publicly available. Data collection requires a lot of data cleaning and pre-processing. The dataset contains facial images that have been categorized based on age, gender, and ethnicity. The dataset includes 27,305 rows and 5 columns[9].
+
+
+
+\end{introduction}

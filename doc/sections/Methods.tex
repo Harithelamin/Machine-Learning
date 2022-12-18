@@ -1,0 +1,151 @@
+\begin{Methods}
+\subsubsection{Ridge Regression}
+Ridge is the first regularisation techniques. Ridge regression estimate defined as:
+
+\[
+\beta\gamma =\left( Z^{T}Z+\lambda\iota \right)^{-1}Z^{T}y
+\]
+
+\[
+\beta\gamma =\left( R^{T}X^{T}X R+\lambda\iota \right)^{-1}R^{T}X^{T}y
+\]
+
+\[
+\beta\gamma =\left( R^{T}X^{T}X R+\lambda R^{T}\left(R^{T}  \right)R^{-1}R\right)^{-1}R^{T}X^{T}y
+\]
+
+\[
+\beta\gamma =\left( R^{T}\left( X^{T}X+\lambda\left( R^{T} \right)^{-1}R^{-1} \right)R \right)^{-1}R^{T}X^{T}y
+\]
+
+\[
+\beta\gamma =R^{-1}\left(X^{T} X + \lambda\left( R^{T} \right)^{-1} R^{-1} \right)^{-1}\left( R^{T} \right)^{-1}R^{T}X^{T}y
+\]
+
+\[
+\beta\gamma =R^{-1}\left( X^{T} X + \lambda\left( R^{T} \right)^{-1} \right)^{-1}X^{T}y
+\]
+
+\subsubsection{Lasso Regression}
+Lasso is the second regularisation technique. It uses absolute coefficient values for normalisation. Lasso regression estimate defined as
+
+\[
+\sum_{i=1}^{n} \left( yj-\sum_{\iota}^{} Xij \beta j \right)^{2} +\sum_{j=1}^{p}\left\lceil \beta j \right\rceil
+\]
+
+\subsection{Logistic Regression Analysis}
+Logistic regression is commonly used for prediction and classification problems. 
+
+
+
+\subsubsection{Gradient Descent}
+Gradient Decent is an optimization algorithm commonly used for prediction and classification problems. This method is commonly used in to minimise a cost/loss function. Regarding to function has define as following:
+
+\[
+X_{T}= (x_{0}, x_{1}, x_{2}, x_{p-1})
+\]
+
+The Gradient Decent can define as following:
+\[
+X_{n}= X_{n-1} - \eta_{n-1}\nabla f(X_{n-1})
+\]
+
+where
+[
+eta
+]
+ is step size of learning rate which scales the gradient and thus controls the step size.
+ 
+Gradient Descent Algorithm iteratively calculates the next point using gradient at the current position, scales it (by a learning rate) and subtracts obtained value from the current position (makes a step). It subtracts the value because we want to minimise the function. This process can be written as:
+\[
+P_{n}+1=P_{n}-\eta\nabla f(p_{n}))
+\]
+
+The algorithm for Gradient Descent method’s steps are to choose a starting point, calculate gradient at this point, and make a scaled step in the opposite direction to the gradient. Then calculate gradient at this point, and make a scaled step in the opposite direction to the gradient again.
+
+
+\subsection{Bagging}
+\subsubsection{Bootstrap Aggregation}
+This machine learning method reduces both bias and variance, and as a result produces a much higher prediction accuracy than a robust classifier by itself. 
+
+However, Bootstrap compilation is a learning method based on compiling many different predictive models. Individual models are trained on random subsets of data that are plotted with replacement, and prediction is made by obtaining the predictions of each individual model.
+
+
+The parameters that are typically set in training the packaging model are the number of subsamples that are drawn on each bootstrap, and the number of individual predictive models that need to be included in the final pooled model.
+
+\subsection{Boosting}
+
+Boosting is a method used in machine learning to reduce errors in predictive data analysis.
+
+Boosting methods are based on the idea that we combine several weak classifiers into one strong classifier, as is the case with bagging, but with boosting the classifiers are made sequentially. 
+
+\subsubsection{AdaBoost}
+
+AdaBoost can be used to boost the performance of any machine learning algorithm. It is best used with weak learners. These are models that achieve accuracy just above random chance on a classification problem. The most suited and therefore most common algorithm used with AdaBoost are decision trees with one level.
+\begin{equation}
+    G = \text{sign} \left( \sum_{m=1}^M \alpha_m G_m \right).
+    \label{eq:boosting}
+\end{equation}
+ In more general terms, the hypothesis $f(x)$ as following:
+
+
+\begin{equation}
+    f(x) = \sum_{m-1}^M \alpha_m b_m (x; \gamma),
+\end{equation}
+
+where $b_m$ are elementary basis functions of $x$, which also depend on a number of parameters $\gamma_m$. In our case this will be the weak classifiers that are combined into our final model. Both AdaBoost and the other boosting methods takes a parameter called the learning rate, which affects how much the weights are adjusted for each iteration.
+
+\subsection{Decision Trees}
+Decision trees is a powerful machine learning algorithm capable of fitting complex data sets, used both for classification and regression. The structure of a decision tree is much like a real life tree, and consists of nodes, branches and leaves, where a node represents a test on a descriptive feature in the data, the branch represents the outcome of this test, and the leaves represent an outcome or a target feature. The main idea is to find the descriptive features in the data which contain the most information about the target feature, and then split the data set along these values such that the feature values of the underlying data set are as pure as possible:
+\begin{equation}
+\label{eq:gini_index}
+    g_m = 1 - \sum_{k=1}^K p_{m, k}^2
+\end{equation}
+
+\begin{equation}
+\label{eq:info_entropy}
+    s_m = - \sum_{k=1}^K p_{m, k}\log{p_{m,k}}.
+\end{equation}
+where $p$ is the ratio of class $k$ instances among the training instances in node $m$. A high value of either of these measures would represent a node which contains little information about which class the observation belongs to, and conversely a low or zero value represents a node with only one outcome, resulting in a leaf node.
+
+
+\begin{equation}
+    C(k, t_k) = \frac{m_{left}}{m}G_{left} + \frac{m_{right}}{m}G_{right}
+\end{equation}
+
+\subsection{Conventional Neural Network}
+
+A. Convolutional Neural Network Model:
+The basic neural network algorithm is a subset of machine learning. It consists of a number of node layers, which contain an input layer, one or more hidden layers. Convolutional neural networks are a type of neural network with more than one layer, and are often used for classification and computer vision tasks.
+
+Convolutional neural networks perform superiorly with image, speech, or audio signal inputs. They have three main types of layers which are: convolutional layer, aggregation layer, and fully connected layer (FC)[4]
+
+Mathematically, I can illustrates the convolutional neural network as:
+
+\[yij=\sum_{u=1}^{i}\sum_{s=1}^{i}H_{us}x_{a}(i, u),b(j, s))\]
+
+The entry of the matrix for i=1,…,m and j=1,…, for convolution kernel H, and a(i,u) and b(j,s) as i+u and j+s
+
+
+\hfill \break
+
+\hfill \break
+
+Convolutional Nural Network architecture(CNN) for classification includes convolutional layers, max-pooling layers, and fully connected layers. the Convolution and max-pooling layers are used for feature extraction. And convolution layers are use for feature detection.
+
+
+However, convolutional layer is use to transform the input data using a group of connected neurons from the previous layer. It use som Hyperparameters :
+1. Filter size:to generally spatially small and possesses three dimensions.
+2. Output depth: to controls the number of neurons in the convolutional layer.
+3. Stride: to  defines the sliding pace of filter per application. 
+4. Zero-padding: to determines the spatial size of output volume
+
+The second layer Convolutional Nural Network is Pooling Layer which will helps to progressively reduce the spatial size of the data.
+
+Third layer of Convolutional Nural Network is Fully Connected Layer, which act as the output layer for the network and has the output volume dimension.
+
+
+
+\end{Methods}
+
+

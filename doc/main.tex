@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage{blindtext}
+\usepackage{authblk}
+\usepackage{multicol}
+\usepackage[english]{babel}
+\usepackage{hyperref}
+\usepackage{amsmath, xparse}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{comment}
+\usepackage{import}
+\graphicspath{ {./images/} }
+\usepackage[nottoc]{tocbibind}
+\setlength{\columnsep}{1cm}
+\title{FYS-STK-4155 Project 3}
+\author{ Harith Elamin \\ University of Oslo, Norway}
+\date{December 2022}
+
+\begin{document}
+\maketitle
+
+\begin{multicols}{2}
+\section{Abstract}
+\import{sections/}{Abstract}
+\section{Introduction}
+\import{sections/}{Introduction}
+\section{Methods}
+\import{sections/}{Methods}
+\section{Discussion}
+\import{sections/}{Discussion}
+\section{Results}
+\import{sections/}{Results}
+\section{Conclusion}
+\import{sections/}{Conclusion}
+\section{References}
+\import{sections/}{References}
+
+
+
+
+
+
+
+
+\end{multicols}
+\end{document}
